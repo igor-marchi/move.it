@@ -59,7 +59,13 @@
   transition: background-color 0.2s linear;
 }
 
-.countdownButton:hover {
+.countdownButton:disabled {
+  background: var(--gray-line);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
+.countdownButton:not(:disabled):hover {
   background: var(--blue-dark);
 }
 
@@ -68,31 +74,10 @@
 }
 
 .countdownButtonPause {
-  width: 100%;
-  height: 5rem;
-
-  margin-top: 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 0;
-  border-radius: 5px;
-
   background: var(--red);
   color: var(--white);
-
-  font-size: 1.25rem;
-  font-weight: 600;
-
-  transition: background-color 0.2s linear;
 }
 
-.countdownButtonPause:hover {
+.countdownButtonPause:not(:disabled):hover {
   background: var(--red-dark);
-}
-
-.countdownButtonPause:focus {
-  outline: 0;
 }
